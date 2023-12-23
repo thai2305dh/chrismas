@@ -109,10 +109,10 @@ $(document).ready(function () {
         document.getElementById("title").innerHTML = "<p>Happy New <b>" + year + "</b> Year!</p>"
 
         if (year === "2023") {
-            document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2022)\">Back to 2022</button> <br>"
+            document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2024)\">Back to 2024</button> <br>"
             document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2024)\">2024</button> <br>"
         } else if (year === "2024") {
-            document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2022)\">Back to 2022</button> <br>"
+            document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2024)\">Back to 2024</button> <br>"
             document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2023)\">2023</button> <br>"
         }
     } else {
@@ -167,7 +167,7 @@ $(document).ready(function () {
         var x = Math.floor((e.layerX - 0.03*this.clientWidth)*100/this.clientWidth);
         var y = Math.floor(e.layerY*100/this.clientHeight);
         const year = urlParams.get("year")
-        if (clickedOnTree(x,y) && (year == null || year === "2022")) {
+        if (clickedOnTree(x,y) && (year == null || year === "2024")) {
             $("#modal-wish-x-position").val(x);
             $("#modal-wish-y-position").val(y);
             MicroModal.show('modal-wish');
