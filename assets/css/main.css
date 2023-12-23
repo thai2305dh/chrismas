@@ -70,6 +70,7 @@ body section.main .sign {
 }
 body section.main .tree {
   background: url("../images/tree.png") no-repeat center;
+  opacity: 0.85;
   background-size: contain;
   width: 650px;
   margin: 130px auto 0;
