@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Bebas Neue";
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url($bg-img) no-repeat top left #f2f2f2;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16px;
+  @media screen and (max-width: $tree-width) {
+    /* for mobile */
+    width: 100%;
+  }
+
+  .popover {
+    white-space: pre-wrap;
+  }
+
+  .popover-title {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .christmas {
+    text-align: center;
+    font-size: 3.5rem;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 90px;
+    width: 650px;
+    margin: 10px auto 20px;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #cc263a;
+    b {
+      color: $aegee-spb-blue;
+    }
+    @media screen and (max-width: $tree-width) {
+      /* for mobile */
+      font-size: 3rem;
+      width: 100%;
+    }
+    .sub-christmas {
+      font-size: 1.5rem;
+      margin-top: 5px;
+      a {
+        color: $aegee-spb-blue;
+        text-decoration: none;
+      }
+    }
+  }
+
+  section.main {
+    height: 100%;
+    display:flex;
+    align-items:center;
+    .sign {
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 30px;
+      position: absolute;
+    }
+    .tree {
+      background: url($tree-img) no-repeat center;
+      background-size: contain;
+      width: 650px;
+      margin: 130px auto 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+      @media screen and (max-width: $tree-width) {
+        /* for mobile */
+        background-size: 85%;
+        height:auto;
+        width: 100%;
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 115%;
+        }
+      }
+      .ball {
+        width: auto;
+        height: 6%;
+        border-radius: 50%;
+        position: absolute;
+        top: $fifty;
+        left: $fifty;
+        @media screen and (max-width: $tree-width) {
+          /* for mobile */
+          height: 7%;
+
+        }
+        /*
+        &:before {
+          content: "";
+          position: absolute;
+          top: 1%;
+          left: 5%;
+          width: 90%;
+          height: 90%;
+          border-radius: 50%;
+          background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 60%);
+          filter: blur(5px);
+        } */
+        &:hover {
+          box-shadow: 0 5px 20px #fff;
+          transition: .3s;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

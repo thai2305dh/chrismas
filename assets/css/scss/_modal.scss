@@ -1,0 +1,44 @@
+.modal {
+
+  display: none;
+
+  &:focus {
+    border: 0;
+  }
+
+  #modal-wish-position {
+    display: none;
+  }
+  .modal__content {
+    label {
+      display: block;
+      font-weight: 600;
+    }
+    input {
+      height: 30px;
+    }
+    input, textarea {
+      font-size: 14px;
+      margin-bottom: 10px;
+      border: 1px solid #e4e4e4;
+      &.w-100 {
+        width: 100%;
+      }
+    }
+    #modal-wish-hint {
+      background: #ff6262;
+      color: #fff;
+      border-radius: 3px;
+      padding: 5px 10px;
+      font-size: .9rem;
+      display: none;
+      &.is-show {
+        display: block;
+      }
+    }
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
