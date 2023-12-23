@@ -104,20 +104,20 @@ $(document).ready(function () {
     const year = urlParams.get("year")
     var firebaseRef = ""
 
-    if (isNumeric(year) && (year === "2020" || year === "2021")) {
+    if (isNumeric(year) && (year === "2023" || year === "2024")) {
         firebaseRef = "_bac_" + year
         document.getElementById("title").innerHTML = "<p>Happy New <b>" + year + "</b> Year!</p>"
 
-        if (year === "2020") {
+        if (year === "2023") {
             document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2022)\">Back to 2022</button> <br>"
-            document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2021)\">2021</button> <br>"
-        } else if (year === "2021") {
+            document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2024)\">2024</button> <br>"
+        } else if (year === "2024") {
             document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2022)\">Back to 2022</button> <br>"
-            document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2020)\">2020</button> <br>"
+            document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2023)\">2023</button> <br>"
         }
     } else {
-        document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2020)\">2020</button> <br>"
-        document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2021)\">2021</button> <br>"
+        document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2023)\">2023</button> <br>"
+        document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2024)\">2024</button> <br>"
 
     }
     firebase.initializeApp(firebaseConfig);
